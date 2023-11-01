@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/M319-MarvelLab.iml" filepath="$PROJECT_DIR$/.idea/M319-MarvelLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/m359_project.iml" filepath="$PROJECT_DIR$/m359_project.iml" />
     </modules>
   </component>
 </project>
