@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cbada716-bb09-4189-ae9c-1135e57199a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Abilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Abilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Characters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Characters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/mainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/mainTester.java" afterDir="false" />
     </list>
     <list id="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" name="Changes by peng6854" comment="">
-      <change beforePath="$PROJECT_DIR$/src/project/Abilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Abilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Battle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/project/Battle.java">
+      <ranges>
+        <range start1="6" end1="13" start2="6" end2="10" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
+        <range start1="14" end1="14" start2="11" end2="23" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
+        <range start1="21" end1="25" start2="30" end2="34" changelist="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="2XaV7bnJMaMfNpQ5V5YMNREh23g" />
   <component name="ProjectViewState">

@@ -9,36 +9,25 @@ public class Abilities {
     Characters juri = new Characters("Juri Han", 3, 6.0, 0.4, 80, "Mage");
     Characters akuma = new Characters("Akuma", 1, 4.5, 0.4, 80, "Tank");
 
+    private static String AKI_des = "1 - AKI * Assassin: higher damage, dodge chance, and critical chance at a cost of lower health";
+    private static String RYU_des = "2 - RYU * Warrior: balanced between health, dodge, critical chance, and damage ";
+    private static String JURI_des = "3 - JURI HAN * Mage: high damage,and critical chance at a cost of low health and low dodge chance";
+    private static String AKUMA_des = "4 - AKUMA * Tank: increased health in exchange for low dodge chance, adn critical chance";
 
-    public Characters getAki() {
-        return aki;
+
+    public static String getAKI_des() {
+        return AKI_des;
     }
 
-    public void setAki(Characters aki) {
-        this.aki = aki;
+    public static String getRYU_des() {
+        return RYU_des;
     }
 
-    public Characters getRyu() {
-        return ryu;
+    public static String getJURI_des() {
+        return JURI_des;
     }
 
-    public void setRyu(Characters ryu) {
-        this.ryu = ryu;
-    }
-
-    public Characters getJuri() {
-        return juri;
-    }
-
-    public void setJuri(Characters juri) {
-        this.juri = juri;
-    }
-
-    public Characters getAkuma() {
-        return akuma;
-    }
-
-    public void setAkuma(Characters akuma) {
-        this.akuma = akuma;
+    public static String getAKUMA_des() {
+        return AKUMA_des;
     }
 }
