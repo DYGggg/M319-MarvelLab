@@ -10,5 +10,8 @@ public class mainTester {
         System.out.println(Abilities.getRYU_des());
         System.out.println(Abilities.getJURI_des());
         System.out.println(Abilities.getAKUMA_des());
+        int selected_fighter = input.nextInt();
+        System.out.println("Your opponent will be...");
+
     }
 }

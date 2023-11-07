@@ -10,36 +10,24 @@ public class Characters {
     public double power;
     private double dodge;
     private int health;
-    private String classification;
+    private double isCritical;
+//    private String classification;
 
 
     // Characters JDoe = new Characters("John doe", 400, 2.0, 100, "warrior");
-    public Characters(String name, double critical, double power, double dodge, int health, String classification){
+    public Characters(String name, double dodge, double power, double critical, int health, double isCritical){
         this.name = name;
-        this.critical = critical;
-        this.power = power;
         this.dodge = dodge;
+        this.power = power;
+        this.critical = critical;
         this.health = health;
-        this.classification = classification;
+        this.isCritical = isCritical;
 
     }
 
-//    public String toString(){
-//        if (this.classification.equals("Assassin")){
-//            return( this.name + " is a " + this.classification + ", meaning they have ");
-//        }
-//        if (this.classification.equals("Warrior")){
-//            return( this.name + " is a " + this.classification + ", meaning they have ");
-//        }
-//        if (this.classification.equals("Mage")){
-//            return( this.name + " is a " + this.classification + ", meaning they have ");
-//        }
-//        if (this.classification.equals("Tank")){
-//            return( this.name + " is a " + this.classification + ", meaning they have ");
-//        }
-//        return("");
-//    }
+    public double getIsCritical() {return isCritical;}
 
+    public void setIsCritical(double isCritical) {this.isCritical = isCritical;}
 
     public String getName() {
         return name;
@@ -61,9 +49,7 @@ public class Characters {
         return power;
     }
 
-    public void setPower(double power) {
-        this.power = power;
-    }
+    public void setPower(double power) {this.power = power;}
 
     public double getDodge() {
         return dodge;
@@ -81,11 +67,6 @@ public class Characters {
         this.health = health;
     }
 
-    public String getClassification() {
-        return classification;
-    }
 
-    public void setClassification(String classification) {
-        this.classification = classification;
-    }
+
 }

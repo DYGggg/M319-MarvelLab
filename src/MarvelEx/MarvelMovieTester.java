@@ -2,16 +2,26 @@ package MarvelEx;
 
 public class MarvelMovieTester {
     public static void main(String[] args) {
-        Power webslinger = new Power("Slings webs", 7);
+        Power webslinger = new Power("Slings webs", 80);
         MarvelCharacter spiderman = new MarvelCharacter("Spiderman", webslinger, true);
 
-        Power grenades = new Power("Pew pew kaboom", 3);
+        MarvelCharacter milesMorales = new MarvelCharacter("Miles Morales", webslinger, true);
+
+        Power grenades = new Power("Pew pew kaboom", 40);
         MarvelCharacter greenGoblin = new MarvelCharacter("Green Goblin", grenades, false);
 
 
         System.out.println(spiderman);
-        System.out.println(greenGoblin);
-        battle(spiderman, greenGoblin);
+        //System.out.println(greenGoblin);
+        System.out.println(milesMorales);
+        int amtToAdd = 15;
+        System.out.println("Adding " + amtToAdd + "...");
+        doublePower(webslinger, amtToAdd);
+
+        //battle(spiderman, greenGoblin);
+        System.out.println(spiderman);
+        //System.out.println(greenGoblin);
+        System.out.println(milesMorales);
     }
 
 
@@ -24,5 +34,13 @@ public class MarvelMovieTester {
 
         System.out.println(char1.getName() + " Health: " + char1.getHealth());
         System.out.println(char2.getName() + " Health: " + char2.getHealth());
+    }
+
+
+    public static void doublePower(Power p, int val){
+        int oldPower = p.getPowerlevel();
+        val++;
+        p.setPowerlevel(oldPower + val);
+
     }
 }

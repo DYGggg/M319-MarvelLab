@@ -4,10 +4,10 @@ public class Abilities {
     //     set a character1 and a character2 variable to whom the user wants to fight
 //     Characters character1 = new Characters("John doe", 400, 2.0, 100, "warrior");
 //     take into account the characters' dodge, powerlevel, and health for math-ing the battles
-    Characters aki = new Characters("A.K.I.", 2, 5.5, 0.4, 80, "Assassin");
-    Characters ryu = new Characters("Ryu", 1, 5.0, 0.2, 100, "Warrior");
-    Characters juri = new Characters("Juri Han", 3, 6.0, 0.4, 80, "Mage");
-    Characters akuma = new Characters("Akuma", 1, 4.5, 0.4, 80, "Tank");
+    Characters aki = new Characters("A.K.I.", 0.4, 7.5, 20.0, 80, 3.5);
+    Characters ryu = new Characters("Ryu", 0.2, 7.0, 15.0, 100, 1.5);
+    Characters juri = new Characters("Juri Han", 0.2, 8.0, 25.0, 70, 4.0);
+    Characters akuma = new Characters("Akuma", 0.1, 6.5, 15.0, 140, 1.0);
 
     private static String AKI_des = "1 - AKI * Assassin: higher damage, dodge chance, and critical chance at a cost of lower health";
     private static String RYU_des = "2 - RYU * Warrior: balanced between health, dodge, critical chance, and damage ";
