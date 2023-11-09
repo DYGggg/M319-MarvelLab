@@ -4,7 +4,6 @@ public class Power {
     private int powerlevel;
     private String powername;
 
-
     public Power(String apower, int thelevel){
         powerlevel = thelevel;
         powername = apower;

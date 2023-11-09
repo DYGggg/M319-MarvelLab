@@ -6,58 +6,48 @@ public class Abilities {
 //     take into account the characters' dodge, powerlevel, and health for math-ing the battles
 
 
+    private double critical;
+    private double power;
+    private int dodge;
+    private double isCritical;
 
-    private static String AKI_des = "1 - AKI * Assassin: higher damage, dodge chance, and critical chance at a cost of lower health";
-    private static String RYU_des = "2 - RYU * Warrior: balanced between health, dodge, critical chance, and damage ";
-    private static String JURI_des = "3 - JURI HAN * Mage: high damage,and critical chance at a cost of low health and low dodge chance";
-    private static String AKUMA_des = "4 - AKUMA * Tank: increased health in exchange for low dodge chance, and critical chance";
+    public Abilities(int dodge, double power, double critical, double isCritical){
+        this.dodge = dodge;
+        this.power = power;
+        this.critical = critical;
+        this.isCritical = isCritical;
 
-
-    public static String getAKI_des() {
-        return AKI_des;
     }
 
-    public static String getRYU_des() {
-        return RYU_des;
+    public double getCritical() {
+        return critical;
     }
 
-    public static String getJURI_des() {
-        return JURI_des;
+    public void setCritical(double critical) {
+        this.critical = critical;
     }
 
-    public static String getAKUMA_des() {
-        return AKUMA_des;
+    public double getPower() {
+        return power;
     }
 
-    public Characters getAki() {
-        return aki;
+    public void setPower(double power) {
+        this.power = power;
     }
 
-    public void setAki(Characters aki) {
-        this.aki = aki;
+    public int getDodge() {
+        return dodge;
     }
 
-    public Characters getRyu() {
-        return ryu;
+    public void setDodge(int dodge) {
+        this.dodge = dodge;
     }
 
-    public void setRyu(Characters ryu) {
-        this.ryu = ryu;
+    public double getIsCritical() {
+        return isCritical;
     }
 
-    public Characters getJuri() {
-        return juri;
-    }
-
-    public void setJuri(Characters juri) {
-        this.juri = juri;
-    }
-
-    public Characters getAkuma() {
-        return akuma;
-    }
-
-    public void setAkuma(Characters akuma) {
-        this.akuma = akuma;
+    public void setIsCritical(double isCritical) {
+        this.isCritical = isCritical;
     }
 }
