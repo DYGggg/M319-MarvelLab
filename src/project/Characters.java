@@ -17,7 +17,7 @@ public class Characters {
 
 
     // Characters JDoe = new Characters("John doe", 400, 2.0, 100, "warrior");
-    public Characters(String name, double health, Abilities anAbility){
+    public Characters(String name, int health, Abilities anAbility){
         this.name = name;
         this.powers = anAbility;
         this.health = health;

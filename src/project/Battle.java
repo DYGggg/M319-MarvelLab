@@ -9,54 +9,10 @@ public class Battle {
     }
 
 
-    public void init(){
 
-        Abilities assassin = new Abilities(40, 7.5, 20.0, 3.5);
-        Abilities warrior = new Abilities(20, 7.0, 15.0, 1.5);
-        Abilities mage = new Abilities(20, 8.0, 25.0, 4.0);
-        Abilities tank = new Abilities(10, 6.5, 15.0, 1.0);
 
-        //(String name, double health, Abilities anAbility)
-        Characters aki =  new Characters("AKI",80, assassin);
-        Characters ryu =  new Characters("RYU", 100 ,warrior);
-        Characters juri =  new Characters("JURI HAN", 70 , mage);
-        Characters akuma =  new Characters("AKUMA", 140, tank);
-    }
 
-    public void turn(Characters mainChar, Characters attacking) {
-        //mainChar is the character getting attacked/damage dealt to
-        //attacking is the attacking character, required for their damage and critical stats
-        double mainDamage = ((Math.random() * 5) + 6) * attacking.getPowers().getPower();
-        double critical_damage = attacking.getPowers().getCritical();
-        if ((attacking.getPowers().getIsCritical() * 10) <= (Math.random() * 10) + 1) {
 
-            mainDamage = mainDamage * critical_damage/10;
-            System.out.println(attacking.getName() + "Dealt " + mainDamage + " damage to " + mainChar.getName());
-        }
-        double is_dodged = (int)(Math.random()*101);
-        if(mainChar.getName().equals("A.K.I.") && is_dodged <= 40){
-            mainDamage = 0;
-            System.out.println("Hit dodged");
-        }
-        else if (mainChar.getName().equals("Ryu") && is_dodged <= 20) {
-            mainDamage = 0;
-            System.out.println("Hit dodged");
-        }
-        else if (mainChar.getName().equals("Juri Han") && is_dodged <= 20) {
-            mainDamage = 0;
-            System.out.println("Hit dodged");
-        }
-        else if (mainChar.getName().equals("Akuma") && is_dodged <= 10) {
-            mainDamage = 0;
-            System.out.println("Hit dodged");
-        }
-
-        double health_main = mainChar.getHealth() - mainDamage;
-        mainChar.setHealth(health_main);
-        System.out.println(mainChar.getName() + " Remaining health: " + mainChar.getHealth());
-        System.out.println(attacking.getName() + "Remaining health: " + attacking.getHealth());
-        System.out.println("Round Over");
-    };
 
 
     // ASSASSIN : A.K.I

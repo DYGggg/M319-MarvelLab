@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbada716-bb09-4189-ae9c-1135e57199a1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/project/Abilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Abilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Battle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Characters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Characters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/mainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/mainTester.java" afterDir="false" />
     </list>
     <list id="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" name="Changes by peng6854" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarvelEx/Power.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarvelEx/Power.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/mainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/mainTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +29,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/project/mainTester.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="9" changelist="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" />
-        <range start1="10" end1="14" start2="11" end2="15" changelist="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" />
-        <range start1="15" end1="17" start2="16" end2="17" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
-        <range start1="23" end1="37" start2="23" end2="25" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
-        <range start1="38" end1="40" start2="26" end2="26" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/project/Battle.java">
       <ranges>
-        <range start1="2" end1="4" start2="2" end2="2" changelist="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" />
-        <range start1="11" end1="11" start2="9" end2="24" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
-        <range start1="15" end1="18" start2="28" end2="31" changelist="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" />
+        <range start1="11" end1="17" start2="11" end2="11" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
+        <range start1="18" end1="24" start2="12" end2="12" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
+        <range start1="25" end1="31" start2="13" end2="13" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
+        <range start1="32" end1="59" start2="14" end2="14" changelist="cbada716-bb09-4189-ae9c-1135e57199a1" />
+        <range start1="60" end1="60" start2="15" end2="16" changelist="c4b0e6ec-cf5d-475a-a1cd-e0c6e03c1c11" />
       </ranges>
     </file>
   </component>
@@ -91,8 +81,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MarvelMovieTester" />
         <item itemvalue="Application.mainTester" />
+        <item itemvalue="Application.MarvelMovieTester" />
       </list>
     </recent_temporary>
   </component>
