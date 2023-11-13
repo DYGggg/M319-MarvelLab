@@ -19,7 +19,7 @@ public class mainTester {
 
         Abilities assassin = new Abilities(40, 3.5, 20.0, 2.5);
         Abilities warrior = new Abilities(20, 3.0, 15.0, 1.5);
-        Abilities mage = new Abilities(20, 4.0, 25.0, 3.0);
+        Abilities mage = new Abilities(10, 4.0, 25.0, 3.0);
         Abilities tank = new Abilities(10, 1.5, 15.0, 1.0);
 
         Characters aki =  new Characters("AKI",80, assassin);
@@ -36,6 +36,12 @@ public class mainTester {
         Characters player = ryu;
         Characters bot = bot_ryu;
 
+        //int bot_select = (int)(Math.random() *4 +1);
+
+
+        //BOT MODIFY
+        int bot_select = 3;
+
         if(selected_fighter == 1){
             player = aki;
         }
@@ -50,7 +56,7 @@ public class mainTester {
         }
 
 
-        int bot_select = (int)(Math.random() *4 +1);
+
 
         if(bot_select == 1){
             bot = bot_aki;
@@ -65,23 +71,26 @@ public class mainTester {
             bot = bot_akuma;
         }
 
-        System.out.println("your opponent is: " + bot.getName());
-
+        System.out.println("your opponent is: " + bot.getName() + "\n\nPress the enter key to continue the battle");
+        input.nextLine();
+        input.nextLine();
         boolean isOver = false;
         while(!isOver){
             if (player.getHealth() > 0 && bot.getHealth() > 0){
                 turn(player, bot);
                 System.out.println();
+                input.nextLine();
             }
             if (player.getHealth() > 0 && bot.getHealth() > 0){
                 turn(bot, player);
                 System.out.println();
+                input.nextLine();
             }
-            else if (player.getHealth() < 0) {
-                System.out.println("Bot wins!");
+            else if (player.getHealth() <= 0) {
+                System.out.println("Bot (" + bot.getName() + ") wins!");
                 isOver = true;
-            } else if (bot.getHealth() < 0) {
-                System.out.println("Player wins!");
+            } else if (bot.getHealth() <= 0) {
+                System.out.println("Player (" + player.getName() + ") wins!");
                 isOver = true;
             }
         }
@@ -98,15 +107,10 @@ public class mainTester {
         double mainDamage = ((Math.random() * 5) + 6) * attacking.getPowers().getPower();
         mainDamage = Math.round(mainDamage * 100.0)/100.0;
         double critical_damage = attacking.getPowers().getCritical();
-        if (((Math.random() * 100) + 1) <= (attacking.getPowers().getIsCritical() * 10)) {
+        boolean criticalBool = (((Math.random() * 100) + 1) <= (attacking.getPowers().getIsCritical() * 10));
 
-            mainDamage = mainDamage * critical_damage/10;
-            mainDamage = Math.round(mainDamage * 100.0)/100.0;
-            System.out.println(attacking.getName() + " Dealt " + mainDamage + " critical damage to " + mainChar.getName());
-        }
-        else{
-            System.out.println(attacking.getName()+ " Dealt " + mainDamage + " damage to " + mainChar.getName());
-        }
+
+
         double is_dodged = (int)(Math.random()*101);
         if(mainChar.getName().equals("AKI") && is_dodged <= 40){
             mainDamage = 0;
@@ -124,13 +128,28 @@ public class mainTester {
             mainDamage = 0;
             System.out.println("Hit dodged");
         }
+        else {
+            if (criticalBool){
+                mainDamage = mainDamage * critical_damage/10;
+                mainDamage = Math.round(mainDamage * 100.0)/100.0;
+                System.out.println(attacking.getName() + " Dealt " + mainDamage + " critical damage to " + mainChar.getName());
+            }
+            else{
+                System.out.println(attacking.getName()+ " Dealt " + mainDamage + " damage to " + mainChar.getName());
+            }
+        }
 
 
 
-        double health_main = mainChar.getHealth() - mainDamage;
+        double health_main = mainChar.getHealth() - Math.round(mainDamage * 100.0)/100.0;
         mainChar.setHealth(health_main);
-        System.out.println(mainChar.getName() + " Remaining health: " + mainChar.getHealth());
-        System.out.println(attacking.getName() + " Remaining health: " + attacking.getHealth());
+        if (mainChar.getHealth() <= 0){
+            mainChar.setHealth(0);
+        }
+
+
+        System.out.println(mainChar.getName() + " Remaining health: " + Math.round(mainChar.getHealth() * 100.0)/100.0);
+        System.out.println(attacking.getName() + " Remaining health: " + Math.round(attacking.getHealth() * 100.0)/100.0);
         System.out.println("Round Over");
     };
 }
