@@ -7,7 +7,9 @@ public class Characters {
     // TANK : AKUMA
     private String name;
     private double health;
-
+    private static double totalDamage = 0;
+    private static int totalCritical = 0;
+    private static int totalHits = 0;
     private Abilities powers;
 
     private static String AKI_des = "1 - AKI * Assassin: higher damage, dodge chance, and critical chance at a cost of lower health";
@@ -47,6 +49,27 @@ public class Characters {
 
     public void setHealth(double health) {
         this.health = health;
+    }
+
+    public static void addTotalDamage(double current) {
+        totalDamage += current;
+    }
+    public static double getTotalDamage() {
+        return totalDamage;
+    }
+
+    public static void addTotalCritical() {
+        totalCritical++;
+    }
+    public static int getTotalCritical() {
+        return totalCritical;
+    }
+
+    public static void addTotalHits() {
+        totalHits++;
+    }
+    public static int getTotalHits() {
+        return totalHits;
     }
 
 

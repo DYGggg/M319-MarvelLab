@@ -1,9 +1,8 @@
 package project;
 
-import java.nio.file.CopyOption;
 import java.util.Scanner;
 
-public class mainTester {
+public class MainTester {
 
     public static void main(String[] args) {
 
@@ -36,11 +35,11 @@ public class mainTester {
         Characters player = ryu;
         Characters bot = bot_ryu;
 
-        //int bot_select = (int)(Math.random() *4 +1);
+        int bot_select = (int)(Math.random() *4 +1);
 
 
         //BOT MODIFY
-        int bot_select = 3;
+        //int bot_select = 3;
 
         if(selected_fighter == 1){
             player = aki;
@@ -89,10 +88,18 @@ public class mainTester {
             else if (player.getHealth() <= 0) {
                 System.out.println("Bot (" + bot.getName() + ") wins!");
                 isOver = true;
+                System.out.println("Total damage dealt: " + player.getTotalDamage());
+                System.out.println("Total dodged attacks: " + player.getTotalHits());
+                System.out.println("Total amount of criticals: " + player.getTotalCritical());
             } else if (bot.getHealth() <= 0) {
                 System.out.println("Player (" + player.getName() + ") wins!");
                 isOver = true;
+                System.out.println("Total damage dealt: " + player.getTotalDamage());
+                System.out.println("Total dodged attacks: " + player.getTotalHits());
+                System.out.println("Total amount of criticals: " + player.getTotalCritical());
+
             }
+
         }
 
 
@@ -115,21 +122,26 @@ public class mainTester {
         if(mainChar.getName().equals("AKI") && is_dodged <= 40){
             mainDamage = 0;
             System.out.println("Hit dodged");
+            mainChar.addTotalHits();
         }
         else if (mainChar.getName().equals("RYU") && is_dodged <= 20) {
             mainDamage = 0;
             System.out.println("Hit dodged");
+            mainChar.addTotalHits();
         }
         else if (mainChar.getName().equals("JURI HAN") && is_dodged <= 20) {
             mainDamage = 0;
             System.out.println("Hit dodged");
+            mainChar.addTotalHits();
         }
         else if (mainChar.getName().equals("AKUMA") && is_dodged <= 10) {
             mainDamage = 0;
             System.out.println("Hit dodged");
+            mainChar.addTotalHits();
         }
         else {
             if (criticalBool){
+                mainChar.addTotalCritical();
                 mainDamage = mainDamage * critical_damage/10;
                 mainDamage = Math.round(mainDamage * 100.0)/100.0;
                 System.out.println(attacking.getName() + " Dealt " + mainDamage + " critical damage to " + mainChar.getName());
@@ -143,6 +155,7 @@ public class mainTester {
 
         double health_main = mainChar.getHealth() - Math.round(mainDamage * 100.0)/100.0;
         mainChar.setHealth(health_main);
+        mainChar.addTotalDamage(Math.round(mainDamage * 100.0)/100.0);
         if (mainChar.getHealth() <= 0){
             mainChar.setHealth(0);
         }
